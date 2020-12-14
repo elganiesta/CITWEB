@@ -116,11 +116,14 @@ Flexbox
 * flex: flex-grow, flex-shrink and flex-basis
 * align-self
 
+Grid 
+
+*We will see this one later*
+
 ## CSS Resources 
 
 * https://fonts.google.com/
 * http://flexboxfroggy.com/#fr
-
 
 
 
