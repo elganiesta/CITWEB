@@ -118,7 +118,11 @@ Flexbox
 
 Grid 
 
-*We will see this one later*
+
+* https://grid.malven.co/
+
+* https://cssgridgarden.com/#fr
+
 
 ## CSS Resources 
 
