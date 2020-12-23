@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 30%;
+    margin: 5%;
+    padding: 5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    margin: 10px 0; 
+}
+
+.form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#add_item {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.check-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.line2 {
+    opacity: 0.5;
+    margin: 10px 20px;
+}
+
+.completed-item {
+    text-decoration: line-through;
+}
