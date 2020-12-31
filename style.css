@@ -3,41 +3,37 @@
     padding: 0;
 }
 
-.container {
-    width: 30%;
-    margin: 5%;
-    padding: 5%;
+img {
+    width: 200px;
+    height: 200px;
 }
 
-body {
-    display: flex;
-    justify-content: center;
+.grid {
+    /* width: 80%;
+    background-color: burlywood;
+    display: grid; */
+    /* grid-gap: 20px; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 100px); */
+    /* grid-template: 1fr 1fr 1fr 1fr / repeat(6, 100px); */
 }
 
-.line {
-    margin: 10px 0; 
+#robot2 {
+    /* order: 99; */
+    position: absolute;
 }
 
-.form {
-    display: flex;
-    margin-bottom: 20px;
+#robot1 {
 }
 
-#add_item {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.check-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-.line2 {
-    opacity: 0.5;
-    margin: 10px 20px;
-}
-
-.completed-item {
-    text-decoration: line-through;
+#robot3 {
+    /* grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 2;
+    grid-row-end: span 3; */
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 1; */
+    /* grid-column: 1/ span 3;
+    grid-row: 2/ span 3; */
+    /* grid-area: 2 / 1 / span 3 / span 3 ; */
 }
