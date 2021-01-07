@@ -139,7 +139,6 @@ Javascript types:
 3. Boolean
 4. Undefined
 5. Null
-6. Symbol (new in ECMAScript 6)
 7. Object
 
 Javascript comparisons:
