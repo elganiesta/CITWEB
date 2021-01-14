@@ -220,8 +220,55 @@ Javascript keywords:
 ******************************************************************************************
 ## DOM Manipulation
 
-- getElementById
-- querySelector
+How to get an element :
+- document.getElementById(id)
+- document.getElementsByTagName(name)
+- document.getElementsByClassName(name)
+- document.querySelector(class or id or tag)
+
+Make change to html or css content :
+- element.innerHTML =  new html content
+- element.attribute = new value
+- element.style.property = new style
+- element.setAttribute(attribute, value)
+
+
+Create or remove elements :
+- document.createElement(element)
+- document.removeChild(element)
+- elmnt.remove(); ( ghaliban mktkhdmch st3mlo removeChild )
+- element.appendChild(element)
+- element.insertBefore(neWelement, child) 
+- document.replaceChild(new, old)
+- document.write(text)
+
+
+Event LIstenners :
+- document.getElementById(id).onclick = function(){code}
+- element.addEventListener(event, function, useCapture);
+- element.removeEventListener(event, myFunction);
+- onEvent in HTML
+
+
+Find all elements of specific type ( makanst3mloch hado bzef ) :
+- document.anchors
+- document.body
+- document.forms
+- document.images
+- document.title
+- document.forms["id"]
+
+
+Navigating Between Nodes :
+- parentNode
+- childNodes[nodenumber]
+- firstChild
+- lastChild
+- nextSibling
+- previousSibling
+- nodeValue
+- nodeName
+- nodeType 
 
 Reference websites:
 *	https://developer.mozilla.org/en-US/docs/web/Events
