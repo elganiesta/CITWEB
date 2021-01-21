@@ -1,112 +1,84 @@
-// let name = "bob";
-// var obj = Object();
-// var obj2 = {
-//     "name": 1
-// };
+// ID dyal todos, variable a chaque ajout d'une nouvelle todo
+let i = 1;
 
-// obj.name = 1;
-// var flag ;
-// if(flag == true) {
-//     console.log(flag);
-// } else {
-//     console.log(flag);
-// }
+// Fonction pour créer les todos
+const createTodo = (title, isCompleted = false) => {
+  return {
+    id: i++,
+    title: title,
+    isCompleted: isCompleted,
+  };
+};
 
-// flag == true ? 
-// console.log("yes") : 
-// console.log("No !");
+// Storage dyal todos, b7al une base de données
+let todos = [
+  createTodo("Todo lwla"),
+  createTodo("Todo tanya", true),
+  createTodo("Todo talta"),
+  createTodo("Todo rab3a", true),
+];
 
-// console.log(flag ?? "Noo..");
+// Fonction katred todos HTMl elements
+const todoToHTML = (todo) => {
+  return `<div class="d-flex justify-content-between align-items-center my-2">
+            <input onchange=changeTodo(${todo.id}) type="checkbox" ${
+    todo.isCompleted && "checked"
+  } />
+            <span ${
+              todo.isCompleted && `class="text-decoration-line-through"`
+            }  >${todo.title}</span>
+            <div>
+              <input onclick=deleteTodo(${
+                todo.id
+              }) class="btn btn-danger" type="button" value="Delete" />
+            </div>
+          </div>`;
+};
 
-// console.log(obj);
+// Fonction kat ajouti les todos wst l'HTML
+const renderTodos = (todos) => {
+  let todosToHTML = "";
+  let completedTodosToHTML = "";
 
-// var name = "luis";
-// switch(name) {
-//     case "luis" :
-//         console.log("yes");
-//         break;
-    
-// }
+  todos.forEach((todo) => {
+    // Tahadi c'est une méthode valable
 
-// var flag = false;
-// var userName = "luis";
+    // if (todo.isCompleted) {
+    //   completedTodosToHTML += todoToHTML(todo);
+    // } else {
+    //   todosToHTML += todoToHTML(todo);
+    // }
 
-// if(!flag) {
-//     console.log('bienvenue ! ');
-// } else {
-//     console.log('sirf7alk')
-// }
+    todo.isCompleted
+      ? (completedTodosToHTML += todoToHTML(todo))
+      : (todosToHTML += todoToHTML(todo));
+  });
 
-// var somme = function nameFunction(a,b,c) {
-//     return a + b +c ;
-// }
+  document.getElementById("todos").innerHTML = todosToHTML;
+  document.getElementById("completed-todos").innerHTML = completedTodosToHTML;
+};
 
-// var somme = (a,b) => {
-//     return a+b;
-// }
+// Fonction de suppression dyal todos
+const deleteTodo = (id) => {
+  todos = todos.filter((todo) => todo.id != id);
+  renderTodos(todos);
+};
 
-// var somme = (a,b) => a + b; 
-// var multiple2 = a => a * 2; 
+// Fonction de modification dyal todos
+const changeTodo = (id) => {
+  let todo = todos.find((todo) => todo.id == id);
+  todo.isCompleted = !todo.isCompleted;
 
-// var sommeABC = somme(1,5);
-// var multipleA = multiple2(5);
+  renderTodos(todos);
+};
 
-// console.log(multipleA);
+renderTodos(todos);
 
-// var list = Array('name', 2);
-// var list2 = ['name', 2];
+// Ajout des todos
+document.getElementById("submit-todo").addEventListener("click", (event) => {
+  let title = document.getElementById("title").value;
+  let todo = createTodo(title);
 
-// var obj = Object();
-// obj.name = "name";
-
-// var obj = {
-//     name : "hhhhhh"
-// };
-
-// console.log(obj['name']);
-// console.log(obj.name);
-
-
-// for(var i=0;i<10;i++) {
-//     console.log(i);
-// }
-
-// var i = 0;
-// while(i<10) {
-//     console.log(i);
-//     i++;
-// }
-
-// var list = [1,2,3,4,5,6,7,8,9,10];
-
-// for(var number of list) {
-//     console.log(number);
-// }
-
-// list.forEach(item => console.log(item))
-
-// try {
-//     var flag = null;
-//     flag.forEach(element => {
-//         console.log("hey")
-//     });
-// } catch (error) {
-//     alert('alert')
-//     var message = prompt("Sorry.. report this problem !")
-//     console.log(message)
-// }
-
-// var message = "String !";
-
-
-// if(typeof message == "string") {
-//     console.log("it's string");
-// } else {
-//     console.log("it's not");
-// }
-
-
-// ? madirch frask 
-// var clicked = () => {
-//     document.getElementById('paragraph').innerHTML = "yes you clicked me"
-// }
+  todos.push(todo);
+  renderTodos(todos);
+});
