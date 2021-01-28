@@ -343,3 +343,22 @@ Loops:
 + for in: `for (param1 in obj) {}` /* It's a for loop of the properties and an action over the property number param1 in an object obj
 
 
+******************************************************************************************
+## Backend ?
+
+### PHP wanawa7ih 
+
+Hello world program :
+
+<?php
+echo "Hello world";
+?>
+
+What do u need ?
+
+https://www.php.net/manual/en/install.php
+
+
+
+
+
