@@ -358,7 +358,7 @@ What do u need ?
 
 https://www.php.net/manual/en/install.php
 
-
+install : https://laragon.org/download/
 
 
 
