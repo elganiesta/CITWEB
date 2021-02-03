@@ -1,84 +1,45 @@
-// ID dyal todos, variable a chaque ajout d'une nouvelle todo
-let i = 1;
+// Les elements dyawli
+let memeImages = document.getElementsByName("meme");
+let textTopInput = document.getElementById("top-text-input");
+let textBottomInput = document.getElementById("bottom-text-input");
+let form = document.getElementById("form");
+let generatedMeme = document.getElementById("generated-meme");
 
-// Fonction pour créer les todos
-const createTodo = (title, isCompleted = false) => {
-  return {
-    id: i++,
-    title: title,
-    isCompleted: isCompleted,
-  };
-};
+const generateMeme = (event) => {
+  event.preventDefault();
 
-// Storage dyal todos, b7al une base de données
-let todos = [
-  createTodo("Todo lwla"),
-  createTodo("Todo tanya", true),
-  createTodo("Todo talta"),
-  createTodo("Todo rab3a", true),
-];
+  let textTop = textTopInput.value;
+  let textBottom = textBottomInput.value;
+  let imageSrc;
 
-// Fonction katred todos HTMl elements
-const todoToHTML = (todo) => {
-  return `<div class="d-flex justify-content-between align-items-center my-2">
-            <input onchange=changeTodo(${todo.id}) type="checkbox" ${
-    todo.isCompleted && "checked"
-  } />
-            <span ${
-              todo.isCompleted && `class="text-decoration-line-through"`
-            }  >${todo.title}</span>
-            <div>
-              <input onclick=deleteTodo(${
-                todo.id
-              }) class="btn btn-danger" type="button" value="Delete" />
-            </div>
-          </div>`;
-};
-
-// Fonction kat ajouti les todos wst l'HTML
-const renderTodos = (todos) => {
-  let todosToHTML = "";
-  let completedTodosToHTML = "";
-
-  todos.forEach((todo) => {
-    // Tahadi c'est une méthode valable
-
-    // if (todo.isCompleted) {
-    //   completedTodosToHTML += todoToHTML(todo);
-    // } else {
-    //   todosToHTML += todoToHTML(todo);
-    // }
-
-    todo.isCompleted
-      ? (completedTodosToHTML += todoToHTML(todo))
-      : (todosToHTML += todoToHTML(todo));
+  memeImages.forEach((memeImage) => {
+    if (memeImage.checked) {
+      switch (memeImage.value) {
+        case "1":
+          imageSrc = "./img/badluckbrian.jpg";
+          break;
+        case "2":
+          imageSrc = "./img/goodguygreg.jpg";
+          break;
+        case "3":
+          imageSrc = "./img/overlyattachedgf.jpg";
+          break;
+        case "4":
+          imageSrc = "./img/whatifitoldyou.jpg";
+          break;
+        default:
+          break;
+      }
+    }
   });
 
-  document.getElementById("todos").innerHTML = todosToHTML;
-  document.getElementById("completed-todos").innerHTML = completedTodosToHTML;
+  // La generation dyal lmeme ta3i
+  let meme = `
+          <p class="text-meme text-meme-top">${textTop}</p>
+          <img src=${imageSrc} alt="" />
+          <p class="text-meme text-meme-bottom">${textBottom}</p>
+  `;
+  generatedMeme.innerHTML = meme;
 };
 
-// Fonction de suppression dyal todos
-const deleteTodo = (id) => {
-  todos = todos.filter((todo) => todo.id != id);
-  renderTodos(todos);
-};
-
-// Fonction de modification dyal todos
-const changeTodo = (id) => {
-  let todo = todos.find((todo) => todo.id == id);
-  todo.isCompleted = !todo.isCompleted;
-
-  renderTodos(todos);
-};
-
-renderTodos(todos);
-
-// Ajout des todos
-document.getElementById("submit-todo").addEventListener("click", (event) => {
-  let title = document.getElementById("title").value;
-  let todo = createTodo(title);
-
-  todos.push(todo);
-  renderTodos(todos);
-});
+form.addEventListener("submit", (e) => generateMeme(e));

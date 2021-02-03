@@ -3,57 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Le CIT meme generator</title>
   </head>
-
   <body>
+    <!-- Navigation bar -->
+    <header class="container">
+      <h2>Le CIT meme generator</h2>
+    </header>
+    <!-- Meme form -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 m-auto p-4">
-          <h3>Add Item</h3>
-          <hr />
-          <div class="d-flex">
-            <input id="title" class="form-control" type="text" />
-            <button id="submit-todo" class="btn btn-dark ms-4">Add</button>
+      <form id="form">
+        <label>Choose your meme :</label>
+        <!-- Selection dyal tsawr -->
+        <div class="meme-images">
+          <div class="memeandradio">
+            <img src="./img/badluckbrian.jpg" alt="" />
+            <input type="radio" name="meme" checked value="1" />
+          </div>
+          <div class="memeandradio">
+            <img src="./img/goodguygreg.jpg" alt="" />
+            <input type="radio" name="meme" value="2" />
+          </div>
+          <div class="memeandradio">
+            <img src="./img/overlyattachedgf.jpg" alt="" />
+            <input type="radio" name="meme" value="3" />
+          </div>
+          <div class="memeandradio">
+            <img src="./img/whatifitoldyou.jpg" alt="" />
+            <input type="radio" name="meme" value="4" />
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 m-auto p-4">
-          <h3>To Do</h3>
-          <hr />
-          <div id="todos"></div>
+
+        <!-- Text dyal lfo9 -->
+        <div class="text-input">
+          <label>Type your top text :</label>
+          <input id="top-text-input" type="text" />
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 m-auto p-4">
-          <h3>Completed</h3>
-          <hr />
-          <div id="completed-todos"></div>
-          <!-- <div class="d-flex justify-content-between align-items-center">
-            <input type="checkbox" />
-            <span class="text-decoration-line-through">Pay Bills</span>
-            <div>
-              <input class="btn btn-success" type="button" value="Edit" />
-              <input class="btn btn-danger" type="button" value="Delete" />
-            </div>
-          </div> -->
+        <!-- Text dyal lte7t-->
+        <div class="text-input">
+          <label>Type your bottom text :</label>
+          <input id="bottom-text-input" type="text" />
+        </div>
+
+        <div class="container">
+          <input type="submit" id="submit-btn" value="Generate meme" />
+        </div>
+      </form>
+    </div>
+
+    <!-- Generated meme -->
+    <div class="container">
+      <div class="generated-meme">
+        <h2>Your generated meme</h2>
+        <div id="generated-meme">
+          <!-- Le meme -->
         </div>
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
