@@ -356,9 +356,80 @@ echo "Hello world";
 
 What do u need ?
 
-https://www.php.net/manual/en/install.php
+- MAC or Win : https://www.mamp.info/en/downloads/
+- Win (lighadi nkhdem bih ana ) : https://laragon.org/download/
 
-install : https://laragon.org/download/
+Syntax : 
+
+- A PHP script starts with <?php and ends with ?>
+<?php
+// PHP code goes here
+?>
+
+- a variable starts with the $ sign : 
+$MY_VARIABLE = 0;
+define("constant name", value);
+
+---> local, global, static ? 
+global $x; //The global keyword is used to access a global variable from within a function.
+$GLOBALS['y'] = 0; //PHP also stores all global variables in an array called $GLOBALS[index].
+static $x = 0; //sometimes we want a local variable NOT to be deleted. We need it for a further job.
+
+- Data types
+var_dump($x); //To know variable type
+
+---> objects in PHP 
+---> strings in PHP
+
+- strlen("string") //function returns the length of a string.
+- str_word_count("sentence") //function counts the number of words in a string.
+- strrev("string") //function reverses a string.
+- strpos("sentence","string") //function searches for a specific text within a string.
+- str_replace("old string","new string","sentence") //function replaces some characters with some other characters in a string.
+
+---> numbers in PHP
+
+- is_int(), is_float(), is_numeric()
+- is_finite(), is_infinite()
+- is_nan()
+- cast string to int => $int_cast = (int)$string_var;
+
+---> Math in PHP 
+
+- pi() //3.14....
+- abs(), sqrt(), round(), rand(), 
+- min(), max()
+
+---> statements o loops ol3ibat 
+
+if statement 
+if...else statement 
+if...elseif...else statement 
+switch () {
+  case :
+    break;
+  default:
+}
+
+while
+do...while
+for 
+foreach ($array as $value) {}
+
+---> pointeurs hhhh
+---> arrays 
+
+array() function is used to create an array.
+count() function is used to return the length (the number of elements) of an array.
+
+sort() - sort arrays in ascending order
+rsort() - sort arrays in descending order
+asort() - sort associative arrays in ascending order, according to the value
+ksort() - sort associative arrays in ascending order, according to the key
+arsort() - sort associative arrays in descending order, according to the value
+krsort() - sort associative arrays in descending order, according to the key
+
+###### PHP Login & Sign up
 
 
 
