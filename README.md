@@ -402,32 +402,32 @@ var_dump($x); //To know variable type
 
 ---> statements o loops ol3ibat 
 
-if statement 
-if...else statement 
-if...elseif...else statement 
-switch () {
+- if statement 
+- if...else statement 
+- if...elseif...else statement 
+- switch () {
   case :
     break;
   default:
 }
 
-while
-do...while
-for 
-foreach ($array as $value) {}
+- while
+- do...while
+- for 
+- foreach ($array as $value) {}
 
 ---> pointeurs hhhh
 ---> arrays 
 
-array() function is used to create an array.
-count() function is used to return the length (the number of elements) of an array.
+- array() function is used to create an array.
+- count() function is used to return the length (the number of elements) of an array.
 
-sort() - sort arrays in ascending order
-rsort() - sort arrays in descending order
-asort() - sort associative arrays in ascending order, according to the value
-ksort() - sort associative arrays in ascending order, according to the key
-arsort() - sort associative arrays in descending order, according to the value
-krsort() - sort associative arrays in descending order, according to the key
+- sort() - sort arrays in ascending order
+- rsort() - sort arrays in descending order
+- asort() - sort associative arrays in ascending order, according to the value
+- ksort() - sort associative arrays in ascending order, according to the key
+- arsort() - sort associative arrays in descending order, according to the value
+- krsort() - sort associative arrays in descending order, according to the key
 
 ###### PHP Login & Sign up
 
