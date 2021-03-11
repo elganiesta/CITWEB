@@ -366,14 +366,14 @@ Syntax :
 // PHP code goes here
 ?>
 
-- a variable starts with the $ sign : 
-$MY_VARIABLE = 0;
-define("constant name", value);
+---> a variable starts with the $ sign : 
+- $MY_VARIABLE = 0;
+- define("constant name", value);
 
 ---> local, global, static ? 
-global $x; //The global keyword is used to access a global variable from within a function.
-$GLOBALS['y'] = 0; //PHP also stores all global variables in an array called $GLOBALS[index].
-static $x = 0; //sometimes we want a local variable NOT to be deleted. We need it for a further job.
+- global $x; //The global keyword is used to access a global variable from within a function.
+- $GLOBALS['y'] = 0; //PHP also stores all global variables in an array called $GLOBALS[index].
+- static $x = 0; //sometimes we want a local variable NOT to be deleted. We need it for a further job.
 
 - Data types
 var_dump($x); //To know variable type
