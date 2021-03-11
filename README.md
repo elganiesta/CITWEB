@@ -346,7 +346,7 @@ Loops:
 ******************************************************************************************
 ## Backend ?
 
-### PHP wanawa7ih 
+### PHP Basic
 
 Hello world program :
 
@@ -429,7 +429,22 @@ var_dump($x); //To know variable type
 - arsort() - sort associative arrays in descending order, according to the value
 - krsort() - sort associative arrays in descending order, according to the key
 
-###### PHP Login & Sign up
+---> A Simple HTML Form
+- <form action="index.php" method="post">
+- <form action="index.php" method="get">
+- $_POST["var"];
+- $_GET["var"];
+- $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
+- empty()
+
+- htmlspecialchars()
+- security : https://www.w3schools.com/php/php_form_validation.asp and next chapters
+
+### PHP MySQL Database
+### PHP Advanced
+
+
+
 
 
 
