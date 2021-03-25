@@ -441,8 +441,39 @@ var_dump($x); //To know variable type
 - security : https://www.w3schools.com/php/php_form_validation.asp and next chapters
 
 ### PHP MySQL Database
-### PHP Advanced
+- session_start(); // start a session, so you can use $_SESSION
+- $db = mysqli_connect('localhost', 'root', '', 'data base name');
+- isset($_POST['variable']) // check if null
+- isset($_GET['variable']) // check if null
+- mysqli_query($db,$query) // execute a query
+- header() // redirect 
+- while ($row = mysqli_fetch_array($results)) // fetch data as rows
+- count($results)
+- check errors 
 
+<?php  if (count($errors) > 0) : ?>
+	<?php foreach ($errors as $error) : ?>
+	<div class="alert alert-danger" role="alert">
+		<span class="err"><?php echo  $error ?></span>
+	</div>
+	<?php endforeach ?>
+<?php  endif ?>
+
+### PDO method 
+
+- create a pdo 
+
+$dsn = 'mysql:host=localhost;dbname=elgalivreur';
+
+$pdo = new PDO($dsn, 'root', '');
+
+- fetch rows : 
+
+$result = $pdo->prepare($query);
+
+$result->execute([$email , $password]);
+
+$user = $result->fetch();
 
 
 
