@@ -1,9 +1,10 @@
-An introductory lecture about NodeJS
+Building APIs using NodeJS and Express
 
-### Slides : [Click me](https://docs.google.com/presentation/d/1KJY1PFZ268BFmtNU7VowwVZskuApAzuG3b5SwvQMAe4/edit?usp=sharing)
+### Slides : [Click me](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-- Lab 1 : Running some Javascript on Node
-- Lab 2 : Exploring some built-in Node packages (os, fs, path, http)
-- Lab 3 : Creating a simple HTTP server using Express
+- Lab 1 : Building a simple API for the add and multiply functions
+- Lab 2 : Building a TODOs API
+- Lab 3 : Linking the previous API to a frontend
 
-To run the Lab 3, you have to run "npm install" in order to install the dependencies in package.json
+In order to run the labs, make sure you have the node_modules folder inside every lab.
+If you don't, first run in terminal 'npm install' in each lab directory.
