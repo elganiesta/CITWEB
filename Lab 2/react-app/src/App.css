@@ -1,0 +1,39 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: orange;
+}
+
+header {
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+}
+
+.container {
+  padding: 100px;
+  text-align: center;
+}
+
+.container > p {
+  font-size: larger;
+}
+
+.cover {
+  background-color: aqua;
+}
+
+.input-div {
+  color: white;
+  background-color: royalblue;
+}
+
+input {
+  margin-top: 10px;
+  font-size: large;
+  height: 20px;
+  width: 100%;
+}
